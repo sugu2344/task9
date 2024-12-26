@@ -7,38 +7,45 @@ use zen;
 ```
 
 - #### collections
+
 ```sql
 db.createCollection("users");
 
 ```
+
 ```sql
 db.createCollection("codekata");
 
 ```
+
 ```sql
 db.createCollection("attendance");
 
 ```
+
 ```sql
 db.createCollection("topics");
 
 ```
+
 ```sql
 db.createCollection("tasks");
 
 ```
+
 ```sql
 db.createCollection("company_drives");
 
 ```
+
 ```sql
 db.createCollection("mentors");
 
 ```
 
+# **Queries**
 
-
-<!-- #### 1) Retrieve all customers who have placed an order in the last 30 days.
+ #### 1) Find all the topics and tasks which are thought in the month of October
 
 ```sql
-``` -->
+``` 
