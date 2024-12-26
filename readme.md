@@ -79,3 +79,8 @@ db.company_drives.aggregate([
 ```sql
 db.codekata.find({}, { user_id: 1, problems_solved: 1 });
 ```
+#### 5) Find all the mentors with who has the mentee's count more than 15
+```sql
+db.mentors.find({ mentees_count: { $gt: 15 } });
+
+```
