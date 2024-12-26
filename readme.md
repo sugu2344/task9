@@ -11,6 +11,31 @@ use zen;
 db.createCollection("users");
 
 ```
+```sql
+db.createCollection("codekata");
+
+```
+```sql
+db.createCollection("attendance");
+
+```
+```sql
+db.createCollection("topics");
+
+```
+```sql
+db.createCollection("tasks");
+
+```
+```sql
+db.createCollection("company_drives");
+
+```
+```sql
+db.createCollection("mentors");
+
+```
+
 
 
 <!-- #### 1) Retrieve all customers who have placed an order in the last 30 days.
