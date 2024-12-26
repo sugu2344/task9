@@ -1,6 +1,6 @@
 # **MongoDB Task**
 
-## Create a database named Zen.
+## Created a database named Zen.
 
 ```sql
 use zen;
