@@ -84,3 +84,29 @@ db.codekata.find({}, { user_id: 1, problems_solved: 1 });
 db.mentors.find({ mentees_count: { $gt: 15 } });
 
 ```
+
+#### 5) Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+```sql
+db.attendance.aggregate([
+  {
+    $match: {
+      status: "absent",
+      date: { $gte: "2020-10-15", $lte: "2020-10-31" }
+    }
+  },
+  {
+    $lookup: {
+      from: "tasks",
+      localField: "user_id",
+      foreignField: "submitted_by",
+      as: "tasks"
+    }
+  },
+  {
+    $match: { "tasks.0": { $exists: false } }
+  },
+  {
+    $group: { _id: null, count: { $sum: 1 } }
+  }
+]);
+```
