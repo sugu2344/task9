@@ -50,3 +50,11 @@ db.createCollection("mentors");
 ```sql
   db.topics.find({ date: { $regex: "2020-10" } });
 ``` 
+
+ #### 2) Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+ 
+```sql
+ db.company_drives.find({
+  date: { $gte: "2020-10-15", $lte: "2020-10-31" }
+});
+``` 
