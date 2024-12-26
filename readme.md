@@ -85,7 +85,7 @@ db.mentors.find({ mentees_count: { $gt: 15 } });
 
 ```
 
-#### 5) Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+#### 6) Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
 ```sql
 db.attendance.aggregate([
   {
