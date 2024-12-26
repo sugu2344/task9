@@ -48,4 +48,5 @@ db.createCollection("mentors");
  #### 1) Find all the topics and tasks which are thought in the month of October
 
 ```sql
+  db.topics.find({ date: { $regex: "2020-10" } });
 ``` 
