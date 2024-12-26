@@ -45,20 +45,22 @@ db.createCollection("mentors");
 
 # **Queries**
 
- #### 1) Find all the topics and tasks which are thought in the month of October
+#### 1) Find all the topics and tasks which are thought in the month of October
 
 ```sql
   db.topics.find({ date: { $regex: "2020-10" } });
-``` 
+```
 
- #### 2) Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+#### 2) Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
 
 ```sql
  db.company_drives.find({
   date: { $gte: "2020-10-15", $lte: "2020-10-31" }
 });
-``` 
+```
+
 #### 3) Find all the company drives and students who are appeared for the placement.
+
 ```sql
 db.company_drives.aggregate([
   {
@@ -72,4 +74,8 @@ db.company_drives.aggregate([
 ]);
 ```
 
-<!-- #### 4) Find all the company drives and students who are appeared for the placement. -->
+#### 4) Find the number of problems solved by the user in codekata
+
+```sql
+db.codekata.find({}, { user_id: 1, problems_solved: 1 });
+```
